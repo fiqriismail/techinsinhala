@@ -1,24 +1,24 @@
 module.exports = {
   plugins: [
     {
-      raesolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-source-filesystem`,
       options: {
         name: `pages`,
-        path: `${__dirname}/src/pages`,
+        path: `${__dirname}/src/pages/`,
       },
     },
     {
-      raesolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-source-filesystem`,
       options: {
         name: `posts`,
-        path: `${__dirname}/src/posts`,
+        path: `${__dirname}/src/posts/`,
       },
     },
     {
-      raesolve: `gatsby-source-filesystem`,
+      resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`,
+        path: `${__dirname}/src/images/`,
       },
     },
     `gatsby-plugin-sharp`,
@@ -26,7 +26,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
-        extensions: [`.md`, `.mdx`],
+        extensions: [`.mdx`, `.md`],
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
