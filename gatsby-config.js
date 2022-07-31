@@ -37,5 +37,12 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`inter`, `noto sans sinhala\:400,700`],
+        display: "swap",
+      },
+    },
   ],
 }
