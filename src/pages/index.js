@@ -2,10 +2,12 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Layout from "../components/Layout"
+import MainMenu from "../components/MainMenu"
 
 const BlogPage = ({ data }) => {
   return (
     <Layout>
+      <MainMenu />
       <div>
         <h1 className="text-4xl underline">Test</h1>
         {data.allMdx.nodes.map(node => (
