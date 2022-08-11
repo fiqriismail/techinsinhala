@@ -45,5 +45,7 @@ module.exports = {
         display: "swap",
       },
     },
+    // Tailwind CSS
+    `gatsby-plugin-postcss`,
   ],
 }
