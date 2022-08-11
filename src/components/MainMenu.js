@@ -9,7 +9,7 @@ import FABlog from "../images/blog.svg"
 const MainMenu = () => {
   return (
     <section id="mainNavigation" className="bg-white">
-      <nav className="relative container mx-auto p-4">
+      <nav className="relative container mx-auto p-6">
         <div className="flex justify-between ">
           <div className="flex items-center">
             <div className="">
