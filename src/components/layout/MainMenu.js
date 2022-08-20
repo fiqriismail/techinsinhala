@@ -13,13 +13,18 @@ const MainMenu = () => {
         <div className="flex justify-between ">
           <div className="flex items-center">
             <div className="">
-              <img src={GreenLogo} alt="" />
+              <Link to="/">
+                <img src={GreenLogo} alt="" />
+              </Link>
             </div>
             <div>
-              <h2 className=" text-gray-700 text-2xl mx-2 md:flex">
-                tech in sinhala
-              </h2>
+              <Link to="/">
+                <h2 className=" text-gray-700 text-2xl mx-2 md:flex">
+                  tech in sinhala
+                </h2>
+              </Link>
             </div>
+
             <div className="hidden md:flex mx-4 mt-1 space-x-6">
               <Link to="/" className="hover:text-mainGreen">
                 Home
