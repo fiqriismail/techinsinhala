@@ -14,7 +14,6 @@ const BlogPage = ({ data }) => {
       <Hero />
       <BodySection>
         <div>
-          <h1 className="text-4xl underline">Test</h1>
           {data.allMdx.nodes.map(node => (
             <article key={node.id}>
               <Link to={`/${node.slug}`}>
