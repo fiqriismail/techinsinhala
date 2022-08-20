@@ -14,7 +14,9 @@ const BlogPage = ({ data }) => {
       <MainMenu />
       <Hero />
       <BodySection>
-        <h1 className="text-4xl mx-2 mb-4 text-gray-700">අලුත්ම ලිපි</h1>
+        <h1 className="text-4xl mx-2 mb-4 text-gray-700 font-light">
+          අලුත්ම ලිපි
+        </h1>
         <div className="grid grid-cols-1 md:grid-cols-4">
           {data.allMdx.nodes.map(node => (
             <BlogPost

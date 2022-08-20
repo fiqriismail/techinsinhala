@@ -33,9 +33,23 @@ const MainMenu = () => {
             </div>
           </div>
           <div className="hidden md:flex space-x-2">
-            <img src={FABlog} alt="" className="w-12 fill-mainGreen" />
-            <img src={FAYouTube} alt="" className="w-12" />
-            <img src={FALinkedIn} alt="" className="w-8" />
+            <a href="https://askfiqri.com" target="_blank" rel="noreferrer">
+              <img src={FABlog} alt="" className="w-12" />
+            </a>
+            <a
+              href="https://youtube.com/c/askfiqri"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={FAYouTube} alt="" className="w-12" />
+            </a>
+            <a
+              href="https://linkedin.com/in/fiqriismail"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img src={FALinkedIn} alt="" className="w-9" />
+            </a>
           </div>
         </div>
       </nav>
