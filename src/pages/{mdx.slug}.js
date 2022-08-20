@@ -1,16 +1,24 @@
 import React from "react"
 import { graphql } from "gatsby"
-import { MDXRenderer } from "gatsby-plugin-mdx"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { getImage } from "gatsby-plugin-image"
+
+import MainLayout from "../components/layout/MainLayout"
+import MainMenu from "../components/layout/MainMenu"
+import Footer from "../components/layout/Footer"
+import SingleBlogPost from "../components/blog/SingleBlogPost"
 
 const BlogPost = ({ data }) => {
   const image = getImage(data.mdx.frontmatter.featuredImage)
   return (
-    <div>
-      <GatsbyImage image={image} alt={data.mdx.frontmatter.title} />
-      <p>{data.mdx.frontmatter.title}</p>
-      <MDXRenderer>{data.mdx.body}</MDXRenderer>
-    </div>
+    <MainLayout>
+      <MainMenu />
+      <SingleBlogPost
+        featuredImage={image}
+        title={data.mdx.frontmatter.title}
+        body={data.mdx.body}
+      />
+      <Footer />
+    </MainLayout>
   )
 }
 
