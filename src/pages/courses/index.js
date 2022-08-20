@@ -1,9 +1,9 @@
 import React from "react"
-import BodySection from "../../components/BodySection"
-import Footer from "../../components/Footer"
+import BodySection from "../../components/layout/BodySection"
+import Footer from "../../components/layout/Footer"
 
-import Layout from "../../components/Layout"
-import MainMenu from "../../components/MainMenu"
+import Layout from "../../components/layout/MainLayout"
+import MainMenu from "../../components/layout/MainMenu"
 
 const CoursePage = () => {
   return (

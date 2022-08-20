@@ -1,11 +1,12 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
-import Layout from "../components/Layout"
-import MainMenu from "../components/MainMenu"
-import Hero from "../components/Hero"
-import BodySection from "../components/BodySection"
-import Footer from "../components/Footer"
+import Layout from "../components/layout/MainLayout"
+import MainMenu from "../components/layout/MainMenu"
+import Hero from "../components/layout/Hero"
+import BodySection from "../components/layout/BodySection"
+import Footer from "../components/layout/Footer"
+import BlogPost from "../components/blog/BlogPost"
 
 const BlogPage = ({ data }) => {
   return (
@@ -13,15 +14,16 @@ const BlogPage = ({ data }) => {
       <MainMenu />
       <Hero />
       <BodySection>
-        <div>
+        <h1 className="text-4xl mx-2 mb-4 text-gray-700">අලුත්ම ලිපි</h1>
+        <div className="grid grid-cols-1 md:grid-cols-4">
           {data.allMdx.nodes.map(node => (
-            <article key={node.id}>
-              <Link to={`/${node.slug}`}>
-                <h2>{node.frontmatter.title}</h2>
-              </Link>
-              <h2 className="text-3xl">{node.frontmatter.title}</h2>
-              <p>Created date: {node.frontmatter.date}</p>
-            </article>
+            <BlogPost
+              postId={node.id}
+              to={`/${node.slug}`}
+              title={node.frontmatter.title}
+              createdDate={node.frontmatter.date}
+              featuredImage={node.frontmatter.featuredImage}
+            />
           ))}
         </div>
       </BodySection>
@@ -38,6 +40,11 @@ export const query = graphql`
           date(formatString: "DD-MM-yyyy")
           slug
           title
+          featuredImage {
+            childImageSharp {
+              gatsbyImageData
+            }
+          }
         }
         id
         body

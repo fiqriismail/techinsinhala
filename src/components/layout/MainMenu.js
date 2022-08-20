@@ -1,10 +1,10 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import GreenLogo from "../images/logo-green.png"
-import FAYouTube from "../images/youtube.svg"
-import FALinkedIn from "../images/linkedin.svg"
-import FABlog from "../images/blog.svg"
+import GreenLogo from "../../images/logo-green.png"
+import FAYouTube from "../../images/youtube.svg"
+import FALinkedIn from "../../images/linkedin.svg"
+import FABlog from "../../images/blog.svg"
 
 const MainMenu = () => {
   return (
