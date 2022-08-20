@@ -25,6 +25,7 @@ const BlogPage = ({ data }) => {
               title={node.frontmatter.title}
               createdDate={node.frontmatter.date}
               featuredImage={node.frontmatter.featuredImage}
+              description={node.frontmatter.description}
             />
           ))}
         </div>
@@ -42,6 +43,7 @@ export const query = graphql`
           date(formatString: "DD-MM-yyyy")
           slug
           title
+          description
           featuredImage {
             childImageSharp {
               gatsbyImageData
@@ -49,7 +51,6 @@ export const query = graphql`
           }
         }
         id
-        body
         slug
       }
     }
